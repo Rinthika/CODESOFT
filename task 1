@@ -1,27 +1,25 @@
-import re
+import pra
 
 def respond_to_user_input(user_input):
-    user_input = user_input.lower()  # Convert user input to lowercase for easier matching
-
-    if re.search(r'\b(hi|hello|hey)\b', user_input):
+    user_input = user_input.lower() 
+    if pra.search(r'\b(hi|hello|hey)\b', user_input):
         return "Hello! How can I assist you today?"
 
-    elif re.search(r'\b(how are you|how are you doing)\b', user_input):
-        return "I'm just a bot, but thanks for asking!"
+    elif pra.search(r'\b(how are you|how are you doing)\b', user_input):
+        return "I'm just a chatbot, thanks for asking!"
 
-    elif re.search(r'\b(thank you|thanks)\b', user_input):
-        return "You're welcome! Feel free to ask if you have any more questions."
+    elif pra.search(r'\b(thank you|thanks)\b', user_input):
+        return "You're welcome! Just Feel free to ask if you have any more questions."
 
-    elif re.search(r'\b(weather)\b', user_input):
+    elif pra.search(r'\b(weather)\b', user_input):
         return "I'm sorry, I don't have access to weather information at the moment."
 
     else:
         return "I'm sorry, I didn't understand that. Could you please rephrase?"
 
-# Main function to run the chatbot
 def main():
-    print("Welcome to the Simple Chatbot!")
-    print("You can start chatting with me. Type 'quit' to exit.")
+    print("Welcome to the Chatbot!")
+    print("You can start chatting with me.")
 
     while True:
         user_input = input("You: ")
